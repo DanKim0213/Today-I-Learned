@@ -36,6 +36,16 @@
     let g:ale_fixers = { 'python': ['black'] }
     let g:ale_fix_on_save = 1
     ```
+#### Configure black-compatible flake8
+
+1. Place `.flake8` file under your working directory such as `~/Programming`
+
+    ```
+    [flake8]
+    max-line-length = 88
+    extend-ignore = E203
+    ```
+1. And then, set your terminal window size to 92 columns and 30 rows. 
 
 #### Enable Mypy automatically
 
