@@ -1,14 +1,26 @@
 # Optimization
 
 Table of Content
+- Recursive Algorithm
 - Divide and Conquer
 - Dynamic Programming
+
+## Recursive Algorithm
+
+[하노이의 탑](B11729.md)
 
 ## Divide and Conquer
 
 [피보나치 수](B2747.md)
 
 ## DP
+
+### Basic
+[쉬운 계단 수](B10844.md), [이동하기](B11048.md), [카드 구매하기](B11052.md), [가장 긴 증가하는 부분 수열](B11053.md), [오르막 수](B11057.md), [2xn 타일링 2](B11727.md), [동물원](B1309.md), [1로 만들기](B1463.md), [내리막 길](B1520.md), [제곱수의 합](B1699.md), [점프](B1890.md), [연속합](B1912.md), [타일 채우기](B2133.md), [이친수](B2193.md), [동전 1](B2293.md)
+
+### Advanced
+
+[동전 2](B2294.md), [DDR](B2342.md)
 
 ## Q. "Divide and Conquer" vs "Decrease and Conquer" 
 
