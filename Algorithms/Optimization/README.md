@@ -33,3 +33,7 @@ According to [Wikipedia](https://en.wikipedia.org/wiki/Divide-and-conquer_algori
 > Under this broad definition, however, every algorithm that uses recursion or loops could be regarded as a "divide-and-conquer algorithm". 
 
 > Therefore, some authors consider that the name "divide and conquer" should be used only when each problem may generate two or more subproblems.[3] The name decrease and conquer has been proposed instead for the single-subproblem class.
+
+## Failed to Solve 
+
+[합분해](https://www.acmicpc.net/problem/2225)

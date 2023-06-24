@@ -12,3 +12,7 @@ Table of Content
 ## Binary Search
 
 ## Back Tracking
+
+## Failed to Solve
+
+[안전 영역](https://www.acmicpc.net/problem/2468)
