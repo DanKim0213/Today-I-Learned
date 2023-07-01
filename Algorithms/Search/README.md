@@ -4,6 +4,7 @@ Table of Content
 - BFS & DFS
 - Binary Search
 - Back Tracking
+- Greedy
 
 ## BFS & DFS
 
@@ -22,6 +23,6 @@ Table of Content
 
 ## Back Tracking
 
-## Failed to Solve
+## Greedy
 
-[안전 영역](https://www.acmicpc.net/problem/2468)
+[순회 공연](B2109.md)
