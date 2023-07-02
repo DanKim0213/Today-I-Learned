@@ -25,4 +25,6 @@ Table of Content
 
 ## Greedy
 
-[순회 공연](B2109.md)
+### Advanced
+
+[순회 강연](B2109.md)
