@@ -33,11 +33,11 @@ Table of Content
 
 ### Basic
 
-[구간 합 구하기4](B11659.md), [구간 합 구하기 5](B11660.md), [부분합](B1806.md), [나머지 합](B10986.md), [두 배열의 합](B2143.md), [수열](B2559.md)
+[구간 합 구하기4](B11659.md), [구간 합 구하기 5](B11660.md), [부분합](B1806.md), [나머지 합](B10986.md), [두 배열의 합](B2143.md), [수열](B2559.md), [사과나무](B20002.md)
 
 ### Failed to Solve
 
-[개똥벌레](https://www.acmicpc.net/problem/3020), [인간-컴퓨터 상호작용](https://www.acmicpc.net/problem/16139),  [직사각형으로 나누기](https://www.acmicpc.net/problem/1451), [사과나무](https://www.acmicpc.net/problem/20002)   
+[개똥벌레](https://www.acmicpc.net/problem/3020), [인간-컴퓨터 상호작용](https://www.acmicpc.net/problem/16139),  [직사각형으로 나누기](https://www.acmicpc.net/problem/1451),    
 
 ## Sliding Window
 
