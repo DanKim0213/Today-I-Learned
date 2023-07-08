@@ -1,6 +1,8 @@
 # Python
 
-Python에 대해 알아보자. [점프 투 파이썬](https://wikidocs.net/book/1)
+Python에 대해 알아보자. 
+- [점프 투 파이썬](https://wikidocs.net/book/1)
+- [Python 3.11 Documentation](https://docs.python.org/3/index.html)
 
 ## 파이썬이란?
 
