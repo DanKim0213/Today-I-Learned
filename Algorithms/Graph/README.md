@@ -12,4 +12,8 @@ Table of Content
 
 ## Disjoint Set
 
-[집합의 표현](https://www.acmicpc.net/problem/1717), [여행 가자](https://www.acmicpc.net/problem/1976), [거짓말](https://www.acmicpc.net/problem/1043), [친구 네트워크](https://www.acmicpc.net/problem/4195), [중량제한](https://www.acmicpc.net/problem/1939), [사이클 게임](https://www.acmicpc.net/problem/20040), [공항](https://www.acmicpc.net/problem/10775), [백조의 호수](https://www.acmicpc.net/problem/3197), [트리](https://www.acmicpc.net/problem/4803), [친구비](https://www.acmicpc.net/problem/16562), [선분 그룹](https://www.acmicpc.net/problem/2162), [Count Circle Groups](https://www.acmicpc.net/problem/10216), [피리 부는 사나이](https://www.acmicpc.net/problem/16724), [회의준비](https://www.acmicpc.net/problem/2610)
+[집합의 표현](B1717.md), [여행 가자](B1976.md), [친구 네트워크](B4195.md), [중량제한](B1939.md), [사이클 게임](B20040.md), [공항](B10775.md), [친구비](B16562.md), [피리 부는 사나이](B16724.md), 
+
+### Failed to solve
+[거짓말](https://www.acmicpc.net/problem/1043),[백조의 호수](https://www.acmicpc.net/problem/3197),[트리](https://www.acmicpc.net/problem/4803),  [선분 그룹](https://www.acmicpc.net/problem/2162),[회의준비](https://www.acmicpc.net/problem/2610)
+
