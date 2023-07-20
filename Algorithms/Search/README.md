@@ -1,11 +1,16 @@
 # Search 
 
 Table of Content
+- Brute-force
 - BFS & DFS
 - Binary Search
 - Back Tracking
 - Greedy
 - Dijkstra
+
+## Brute-force
+
+[리모컨](B1107.md)
 
 ## BFS & DFS
 
@@ -13,14 +18,16 @@ Table of Content
 
 ### BFS
 
-[샘터](B18513.md), [토마토](B7569.md), [숨바꼭질](B1697.md), [아기상어](B16236.md), [캐슬디펜스](B17135.md), [미로 탐색](B2178.md), [특정 거리의 도시 찾기](B18352.md), [연구소 3](B17142.md), [중량제한](B1939.md)
+[샘터](B18513.md), [토마토](B7569.md), [숨바꼭질](B1697.md), [아기상어](B16236.md), [캐슬디펜스](B17135.md), [미로 탐색](B2178.md), [특정 거리의 도시 찾기](B18352.md), [연구소 3](B17142.md), [중량제한](B1939.md), [Puyo Puyo](B11559.md), [달이 차오른다, 가자](B1194.md)
 
 ### DFS
 
-[감시](B15683.md), [빵집](B3109.md)
+[감시](B15683.md), [빵집](B3109.md), [ABCDE](B13023.md)
 
 
 ## Binary Search
+
+[K번째 수](B1300.md)
 
 ## Back Tracking
 
