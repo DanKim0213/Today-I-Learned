@@ -10,7 +10,7 @@ Table of Content
 
 ## Recursive Algorithm
 
-[하노이의 탑](B11729.md), [무한 수열](B1351.md)
+[하노이의 탑](B11729.md), [무한 수열](B1351.md), [모음 사전](P84512.md), [호텔 방 배정](P64063.md)
 
 ## Divide and Conquer
 
