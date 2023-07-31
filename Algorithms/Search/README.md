@@ -27,7 +27,7 @@ Table of Content
 
 ## Binary Search
 
-[K번째 수](B1300.md)
+[K번째 수](B1300.md), [징검다리](P43236.md), [입국심사](P43238.md), [순위 검색](P72412.md)
 
 ## Back Tracking
 
