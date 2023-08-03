@@ -293,6 +293,8 @@ img {
 
 ### 7.2. Fetch Priority
 
+For important images-such as the [LCP](https://web.dev/lcp/) image, you can further prioritize the loading by setting the `fetchpriority` attribute to `high`.
+
 #### 7.2.1. `<img>`
 - `loading="eager"` and `fetchpriority="high"`: This will tell the browser to fetch the image right away, and at high priority. But the browser will have to **de-prioritize another resource** such as a script or a font file. Only set fetchpriority="high" on an image if it is truly vital. 
 
