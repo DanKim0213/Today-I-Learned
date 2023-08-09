@@ -31,3 +31,5 @@ Else:
 
 
 ### Q. (s: string | null) => void vs (s?: string) => void
+
+A. Same
