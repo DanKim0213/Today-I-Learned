@@ -1,6 +1,14 @@
-# Handbook
+# Cheatsheet of Handbook
 
 [link](https://www.typescriptlang.org/docs/handbook/intro.html)
+
+based on `use case`
+
+1. What is TypeScript?
+1. How does TypeScript automatically infer types?
+1. How do we use TypeScript in Functions?
+1. Classes
+1. Modules
 
 Table of Content
 
@@ -40,11 +48,14 @@ printCoord({ x: 100, y: 100 });
 - Variables:
 
 ```ts
-// 'myName' is inferred as type 'string'
+// 'myName' is inferred as type 'string' since it might be changed
 let myName = "Alice";
 
-// 'animalName' is inferred as type 'Cheshire' 
+// 'animalName' is inferred as type 'Cheshire' since it is never changed
 const animalName = "Cheshire"; 
+
+// 'x' is inferred as type 'string' | 'number'
+let x = math.random() < 0.5 ? 10 : "hello";
 
 ```
 
@@ -94,54 +105,4 @@ handleRequest(req.url, req.method);
 
 ```
 
-There are three workarounds:
 
-1. convert the entire object to be type literals. (recommended)
-1. add a type assertion.
-1. declare a type alias and use it on both. 
-
-```ts
-// 1. type literals
-const req = { url: "https://example.com", method: "GET" } as const;
-handleRequest(req.url, req.method);
-
-// 2. type assertions
-const req = { url: "https://example.com", method: "GET" as "GET" };
-handleRequest(req.url, req.method)
-
-// 3. type alias
-type Request = {
-    url: string;
-    method: "GET" | "POST";
-}
-
-declare function handleRequest(req: Request): void;
-const req: Request = { url: "https://examplem.com", method: "GET" }
-handleRequest(req)
-```
-
-
-## 3. Narrowing
-
-When working with Union Types, TypeScript will only allow an operation if it is valid for *every* member of the union.  
-
-```ts
-// Return type is inferred as number[] | string
-funtion getFirstThree(x: number[] | string) {
-    return x.slice(0, 3)
-}
-```
-
-However, if it is not valid, we need to *narrow* the union.
-
-```ts
-// Note that if `x` wasn't a string[], then it must have been a string
-function welcomePeople(x: string[] | string) {
-    if (Array.isArray(x)) {
-        // Here: 'x' is 'string[]'
-    } else {
-        // Here: 'x' is 'string'
-    }
-}
-
-```
