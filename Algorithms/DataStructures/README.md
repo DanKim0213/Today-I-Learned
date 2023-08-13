@@ -2,11 +2,16 @@
 
 Table of Content
 
+- Linked List
 - Map
 - Stack
 - Queue
 - Priority Queue 
 - Union Find
+
+## Linked List
+
+[표 편집](P81303.md)
 
 ## Map
 
