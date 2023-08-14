@@ -1,18 +1,29 @@
 # Cheatsheet of Handbook
 
-based on `use-case`
+written from the perspective of **use-case**, based on [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
 
-Table of Content
+Table of Content:
 
 1. What is TypeScript?
 1. How does TypeScript automatically infer types?
 1. How do we use TypeScript in Functions?
-1. Classes
 1. Modules
 
-OFF-TOPIC
-1. Which one between `interfaces` and `types` should I use?
-1. `unknown`
+Out of Discussion:
+
+- [Classes](https://www.typescriptlang.org/docs/handbook/2/classes.html)
+- [Readonly](https://www.typescriptlang.org/docs/handbook/2/objects.html#readonly-properties)
+- [Tuples](https://www.typescriptlang.org/docs/handbook/2/objects.html#tuple-types)
+- [Excess Property Checks](https://www.typescriptlang.org/docs/handbook/2/objects.html#excess-property-checks)
+- [Utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+- [unknown](https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown)
+- [Private class features](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+
+TODO:
+
+- Generic
+- Callback functions 
+- Modules
 
 ## What is TypeScript?
 
@@ -268,9 +279,9 @@ TypeScript looks at special checks (called *type guards*) and assignments, and t
 When working with Union Types, TypeScript will only allow an operation if it is valid for *every* member of the union:  
 
 ```ts
-// Return type is inferred as number[] | string
-funtion getFirstThree(x: number[] | string) {
-    return x.slice(0, 3)
+function getFirstThree(x: number[] | string) {
+  // 🤖 (parameter) x: string | number[]
+  return x.slice(0, 3)
 }
 ```
 
@@ -281,25 +292,111 @@ However, if it is not valid, we need to *narrow* the union. *Narrowing* occures 
 ```ts
 function padLeft(padding: number | string, input: string) {
   if (typeof padding === "number") {
-    // (parameter) padding: number
+    // 🤖 (parameter) padding: number
     return " ".repeat(padding) + input;
   }
-  // (parameter) padding: string
+  // 🤖 (parameter) padding: string
   return padding + input;
 }
 ```
 - instanceof (for classes)
 
 ```ts
-
+function logValue(x: Date | string) {
+  if (x instanceof Date) {
+    // 🤖 (parameter) x: Date
+    console.log(x.toUTCString());
+  } else {
+    // 🤖 (parameter) x: string
+    console.log(x.toUpperCase());
+  }
+}
 ```
 - "property" in object (for objects)
 
 ```ts
+type Fish = { swim: () => void };
+type Bird = { fly: () => void };
+ 
+function move(animal: Fish | Bird) {
+  if ("swim" in animal) {
+    // 🤖 (parameter) animal: Fish
+    return animal.swim();
+  }
+ 
+  // 🤖 (parameter) animal: Bird
+  return animal.fly();
+}
 ```
-- type-guard functions (for anything)
+- Discriminated union + `never` (for state management)
 
 ```ts
+type NetworkLoadingState = {
+  state: "loading";
+};
+type NetworkFailedState = {
+  state: "failed";
+  code: number;
+};
+type NetworkSuccessState = {
+  state: "success";
+  response: {
+    title: string;
+    duration: number;
+    summary: string;
+  };
+};
+// Create a type which represents only one of the above types
+// but you aren't sure which it is yet.
+type NetworkState =
+  | NetworkLoadingState
+  | NetworkFailedState
+  | NetworkSuccessState;
+```
+
+TypeScript will use a `never` type to represent a state which shouldn’t exist. 
+
+For example, by adding a `default` which tries to assign the shape to `never` will not raise an error when every possible case has been handled:
+
+```ts
+interface Circle {
+  kind: "circle";
+  radius: number;
+}
+ 
+interface Square {
+  kind: "square";
+  sideLength: number;
+}
+
+interface Triangle {
+  kind: "triangle";
+  sideLength: number;
+}
+
+type Shape = Circle | Square | Triangle;
+
+function getArea(shape: Shape) {
+  switch (shape.kind) {
+    case "circle":
+      // 🤖 (parameter) shape: Circle
+      return Math.PI * shape.radius ** 2;
+    case "square":
+      // 🤖 (parameter) shape: Square
+      return shape.sideLength ** 2;
+    default:
+      // ⚠️ Type 'Triangle' is not assignable to type 'never'.
+      const _exhaustiveCheck: never = shape;
+      return _exhaustiveCheck;
+  }
+}
+```
+
+
+- type-guard functions using *type predicates* (for anything)
+
+```ts
+// For example, `Array.isArray(value)`
 // Note that if `x` wasn't a string[], then it must have been a string
 function welcomePeople(x: string[] | string) {
     if (Array.isArray(x)) {
@@ -309,18 +406,140 @@ function welcomePeople(x: string[] | string) {
     }
 }
 
+type Fish = { swim: () => void };
+type Bird = { fly: () => void };
+function isFish(pet: Fish | Bird) : pet is Fish {
+  return "swim" in pet;
+}
+
+const zoo: (Fish | Bird)[] = [getSmallPet(), getSmallPet(), getSmallPet()];
+const underWater1: Fish[] = zoo.filter(isFish);
 ```
 
-- When to use custom type guards?
-- Discriminated union + `never`
+In general, we would not need user-defined type guard functions except for:
+
+- You want more direct control over how types change throughout your code.
+- `this`-based type guards: `this is Type` in the return position for methods in classes and interfaces:
+
+```ts
+class Box<T> {
+  value?: T;
+ 
+  // for lazy validation of a particular field T.
+  hasValue(): this is { value: T } {
+    return this.value !== undefined;
+  }
+}
+ 
+const box = new Box();
+box.value = "Gameboy";
+ 
+box.value; // 🤖 (property) Box<unknown>.value?: unknown
+ 
+// Remove an `undefined` from the value held inside box if `true`
+if (box.hasValue()) {
+  box.value; // 🤖 (property) value: unknown
+}
+```
 
 ### 5. Generic
 
-- How generic works
-- You should not use Generic if ...
+In TypeScript, *generics* are used for a function **where the types of the input relate to the type of the output**, or **where the types of two inputs are related in some way**:
+
+```ts
+// 👎 bad
+function firstElement(arr: any[]) {
+  return arr[0];
+}
+
+// 👍 good
+function firstElement<Type>(arr: Type[]): Type {
+  return arr[0];
+}
+
+// 🤖 function firstElement<string>(arr: string[]): string
+const s = firstElement(["a", "b", "c"]);
+// 🤖 function firstElement<number>(arr: number[]): number
+const n = firstElement([1, 2, 3]);
+// 🤖 function firstElement<never>(arr: never[]): never
+const u = firstElement([]);
+
+console.log(u) // undefined
+```
+
+- inference
+
+```ts
+```
+
+- constraints
+
+```ts
+
+```
+
+- Guidelines for Writing Good Generic Functions
+
+> Rule: If a type parameter only appears in one location, strongly reconsider if you actually need it
+
+Sometimes we forget that a function might not need to be generic:
+
+```ts
+// 👎 bad
+function greet1<Str extends string>(s: Str) {
+  console.log("Hello, " + s);
+}
+ 
+// 👍 good
+function greet2(s: string) {
+  console.log("Hello, " + s);
+}
+```
+
+> Rule: Always use as few type parameters as possible
+
+We create a type parameter Func that doesn’t relate two values:
+
+```ts
+// 👎 bad
+function filter1<Type, Func extends (arg: Type) => boolean>(
+  arr: Type[],
+  func: Func
+): Type[] {
+  return arr.filter(func);
+}
+
+// 👍 good
+function filter2<Type>(arr: Type[], func: (arg: Type) => boolean): Type[] {
+  return arr.filter(func);
+}
+ 
+```
+
+> Rule: When possible, use the type parameter itself rather than constraining it
+
+```ts
+// 👎 bad
+function firstElement1<Type extends any[]>(arr: Type) {
+  return arr[0];
+}
+
+// 👍 good
+function firstElement2<Type>(arr: Type[]) {
+  return arr[0];
+}
+ 
+// val1: any (bad)
+const val1 = firstElement1([1, 2, 3]);
+// val2: number (good)
+const val2 = firstElement2([1, 2, 3]);
+```
+
+## Modules
+
+To be discussed...
 
 ## References
 
-- [Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
-- [Private class features](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
 - [Interface vs Types](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)
+
