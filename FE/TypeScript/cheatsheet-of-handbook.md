@@ -1,13 +1,13 @@
 # Cheatsheet of Handbook
 
-written from the perspective of **use-case**, based on [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+written from the perspective of **use-case**, based on [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) and [Do's and Don'ts](https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html)
 
 Table of Content:
 
 1. What is TypeScript?
 1. How does TypeScript automatically infer types?
 1. How do we use TypeScript in Functions?
-1. Modules
+1. Conclusion
 
 Out of Discussion:
 
@@ -18,12 +18,6 @@ Out of Discussion:
 - [Utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
 - [unknown](https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown)
 - [Private class features](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
-
-TODO:
-
-- Generic
-- Callback functions 
-- Modules
 
 ## What is TypeScript?
 
@@ -151,13 +145,36 @@ function doSomething(cbfn: () => void) {
 }
 ```
 
-> Rule: When writing a function type for a callback, never write an optional parameter unless you intend to call the function without passing that argument
+> Rule: When writing a function type for a callback, never write an optional parameter
 
-[TBD]
+It’s always legal to provide a callback that accepts fewer arguments. Like in JavaScript, if you call a function with more arguments than there are parameters, the extra arguments are simply ignored: 
+
+```ts
+// 👎 bad
+interface Fetcher {
+  getObject(done: (data: unknown, elapsedTime?: number) => void): void;
+}
+
+// 👍 good
+interface Fetcher {
+  getObject(done: (data: unknown, elapsedTime: number) => void): void;
+}
+```
 
 ### 2. Function Overloads 
 
 In TypeScript, we can specify a function that can be called in different ways by writing overload signatures.
+
+> Rule: [**Do** sort overloads](https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html#ordering) by putting the more general signatures after more specific signatures:
+
+```ts
+/* OK */
+declare function fn(x: HTMLDivElement): string;
+declare function fn(x: HTMLElement): number;
+declare function fn(x: unknown): unknown;
+var myElem: HTMLDivElement;
+var x = fn(myElem); // x: string, :)
+```
 
 The signature of the implementation is not visible from the outside. When writing an overloaded function, you should always have two or more signatures above the implementation of the function:
 
@@ -467,15 +484,43 @@ const u = firstElement([]);
 console.log(u) // undefined
 ```
 
+As you see `function firstElement<Type>(arr: Type[]): Type`, \<Type\> is required to be next to the function name. By doing so, we can use `Type` either as arguments or as a return type. However, you don't need to specify \<Type\> every time. Instead, TypeScript could infer types from the arguments and the return value of function expressions.  
+
 - inference
 
+Likewise we mentioned [How Type Inference]() above, we need to specify types of parameters. Note that we didn’t have to specify `Type` in this sample. The type was *inferred* automatically by TypeScript:
+
 ```ts
+function map<Input, Output>(arr: Input[], func: (arg: Input) => Output) {
+  return arr.map(func);
+}
+ 
+// 🤖 function map<string, number>(arr: string[], func: (arg: string) => number): number[]
+const parsed = map(["1", "2", "3"], (n) => parseInt(n));
 ```
 
 - constraints
 
-```ts
+So far, We’ve written some generic functions that can work on any kind of value. Sometimes **we want to relate two values, but can only operate on a certain subset of values**. 
 
+In this case, we can use a *constraint* to limit the kinds of types that a type parameter can accept by writing an `extend` clause:
+
+```ts
+function longest<Type extends { length: number }>(a: Type, b: Type) {
+  if (a.length >= b.length) {
+    return a;
+  } else {
+    return b;
+  }
+}
+ 
+// longerArray is of type 'number[]'
+const longerArray = longest([1, 2], [1, 2, 3]);
+// longerString is of type 'alice' | 'bob'
+const longerString = longest("alice", "bob");
+
+// ⚠️ Argument of type 'number' is not assignable to parameter of type '{ length: number; }'
+const notOK = longest(10, 100); // typeof 10 === 'number'
 ```
 
 - Guidelines for Writing Good Generic Functions
@@ -535,11 +580,6 @@ const val1 = firstElement1([1, 2, 3]);
 const val2 = firstElement2([1, 2, 3]);
 ```
 
-## Modules
+## Conclusion
 
-To be discussed...
-
-## References
-
-- [Interface vs Types](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)
-
+TypeScript’s type system aims to make it as easy as possible to write typical JavaScript code without bending over backwards to get type safety. From this idea, I realized that it is crucial of writing typical javaScript code more worth than using TypeScript.
