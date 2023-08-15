@@ -36,6 +36,14 @@
     let g:ale_fixers = { 'python': ['black'] }
     let g:ale_fix_on_save = 1
     ```
+
+#### WARNING Could not load Python 3
+
+1. According to `:checkhealth provider`, see `:help provider-python`.
+2. For Python 3 plugins:
+    1. Make sure Python 3.4+ is available in your $PATH.
+    2. Install the module (try "python" if "python3" is missing): `$ python3 -m pip install --user --upgrade pynvim`
+
 #### Configure black-compatible flake8
 
 1. Place `.flake8` file under your working directory such as `~/Programming`
