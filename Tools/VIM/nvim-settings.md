@@ -27,7 +27,7 @@
 
 #### Enable Black automatically on save?
 
-1. `$ pip install black`
+1. `$ python3 -m pip install black`
 1. `$ export PATH="/Users/dankim/Library/Python/3.9/bin/:$PATH" // to enable python modules with pip list -v`
 1. init.vim
     ```
@@ -46,6 +46,7 @@
 
 #### Configure black-compatible flake8
 
+1. `$ python3 -m pip install flake8`
 1. Place `.flake8` file under your working directory such as `~/Programming`
 
     ```
@@ -57,7 +58,7 @@
 
 #### Enable Mypy automatically
 
-1. `$python -m pip install -U mypy`
+1. `$python3 -m pip install -U mypy`
 1. init.vim
     ```
     let b:ale_linters = ['mypy'] 
