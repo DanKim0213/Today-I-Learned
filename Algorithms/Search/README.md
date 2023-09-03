@@ -10,7 +10,7 @@ Table of Content
 
 ## Brute-force
 
-[리모컨](B1107.md), [색종이 붙이기](B17136.md)
+[리모컨](B1107.md), [색종이 붙이기](B17136.md), [풍선 터트리기\*\*](P68646.md)
 
 ## BFS & DFS
 
