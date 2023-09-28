@@ -7,6 +7,11 @@ It means ***divide into two usually equal parts***.
 - `bisect_left`: find\_ge -> thus, a[i-1] could be lt
 - `bisect_right`: find\_gt -> thus, a[i-1] could be le
 
+
+## Example
+
+According to [Python docs](https://docs.python.org/3/library/bisect.html):
+
 ```python
 from bisect import bisect_left, bisect_right
 
