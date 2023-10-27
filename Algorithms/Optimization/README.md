@@ -1,6 +1,7 @@
 # Optimization
 
 Table of Content
+
 - Recursive Algorithm
 - Divide and Conquer
 - Dynamic Programming
@@ -11,7 +12,7 @@ Table of Content
 
 ## Recursive Algorithm
 
-[하노이의 탑](B11729.md), [무한 수열](B1351.md), [모음 사전](P84512.md), [호텔 방 배정](P64063.md)
+[하노이의 탑](B11729.md), [무한 수열](B1351.md), [모음 사전](P84512.md), [호텔 방 배정](P64063.md), [유전법칙\*\*](P121685.md)
 
 ## Divide and Conquer
 
@@ -21,7 +22,7 @@ Table of Content
 
 [쉬운 계단 수](B10844.md), [이동하기](B11048.md), [카드 구매하기](B11052.md), [가장 긴 증가하는 부분 수열](B11053.md), [오르막 수](B11057.md), [2xn 타일링 2](B11727.md), [동물원](B1309.md), [1로 만들기](B1463.md), [내리막 길](B1520.md), [제곱수의 합](B1699.md), [점프](B1890.md), [연속합](B1912.md), [타일 채우기](B2133.md), [이친수](B2193.md), [동전 1](B2293.md), [퇴사 2](B15486.md), [동전 2\*](B2294.md), [DDR\*\*](B2342.md), [숫자 타자 대회\*](P136797.md), [벽장문의 이동\*](B2666.md)
 
-### Failed to Solve 
+### Failed to Solve
 
 [합분해](https://www.acmicpc.net/problem/2225)
 
@@ -31,11 +32,11 @@ Table of Content
 
 ### Failed to Solve
 
-[개똥벌레](https://www.acmicpc.net/problem/3020), [인간-컴퓨터 상호작용](https://www.acmicpc.net/problem/16139),  [직사각형으로 나누기](https://www.acmicpc.net/problem/1451),    
+[개똥벌레](https://www.acmicpc.net/problem/3020), [인간-컴퓨터 상호작용](https://www.acmicpc.net/problem/16139), [직사각형으로 나누기](https://www.acmicpc.net/problem/1451),
 
 ## Sliding Window
 
-[수열](B2559.md), [내려가기](B2096.md), [회전 초밥](B15961.md),  [블로그](B21921.md),  [귀여운 라이언](B15565.md),  [게으른 백곰](B10025.md), 
+[수열](B2559.md), [내려가기](B2096.md), [회전 초밥](B15961.md), [블로그](B21921.md), [귀여운 라이언](B15565.md), [게으른 백곰](B10025.md),
 
 ### Failed to Solve
 
@@ -49,7 +50,7 @@ Table of Content
 
 [요격 시스템](P181188.md)
 
-## Q. "Divide and Conquer" vs "Decrease and Conquer" 
+## Q. "Divide and Conquer" vs "Decrease and Conquer"
 
 According to [Wikipedia](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm):
 
@@ -57,9 +58,6 @@ According to [Wikipedia](https://en.wikipedia.org/wiki/Divide-and-conquer_algori
 
 > The name "divide and conquer" is sometimes applied to algorithms that reduce each problem to only one sub-problem, such as the binary search algorithm for finding a record in a sorted list.
 
-> Under this broad definition, however, every algorithm that uses recursion or loops could be regarded as a "divide-and-conquer algorithm". 
+> Under this broad definition, however, every algorithm that uses recursion or loops could be regarded as a "divide-and-conquer algorithm".
 
 > Therefore, some authors consider that the name "divide and conquer" should be used only when each problem may generate two or more subproblems.[3] The name decrease and conquer has been proposed instead for the single-subproblem class.
-
-
-
