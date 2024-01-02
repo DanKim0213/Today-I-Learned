@@ -1,59 +1,37 @@
 # Today I Learned
 
-"Stay hungry, stay foolish"
+> Stay hungry, stay foolish. - Whole Earth Catalog
 
-"Learn it all, then forget it all" by Bruce Lee
-i.e. absorb strengths of each source, forget it not to restrict to the limits of the sources, and then learn and forget again until you master.
+> 적을 알고 나를 알면 백번 싸워도 위태롭지 않다. - 손자병법
+
+## Entry points
+
+- ~~How Browser render content with React (feat. frontend)~~
+- ~~BFS vs DFS (feat. algorithms)~~
+- ~~Speaking JavaScript (feat. languages)~~
 
 ## Tree
-
-The issue tags are categories:
-- algorithm, frontend, language, tool, etc. 
-
-The issue titles are subcategories:
-- Languages
-    - Python, JavaScript 
-- Algorithms
-    - Graph 
-- FE 
-    - React, Web 
-- Tools
-    - Gmail, VIM, ESLint
 
 ```
 .
 ├── Algorithms
-│   └── Graph
-│       ├── DFS-vs-BFS.md
-│       ├── MST.md
-│       └── overview.md
+│   ├── DataStructures
+│   ├── Graph
+│   ├── Optimization
+│   ├── Search
+│   └── Undefined
 ├── FE
-│   ├── ReactTypescript.md
-│   ├── Test
-│   │   ├── TDD-in-react.md
-│   │   ├── how-to-handle-errors-with-jest.md
-│   │   ├── mock-vs-stub.md
-│   │   ├── react-testing-library.md
-│   │   └── unit-testing.md
-│   ├── javascript.md
-│   └── vite.md
+│   ├── Assignment
+│   ├── Reactjs
+│   ├── Test
+│   └── Web
 ├── Languages
-│   ├── Python
-│   │   └── python.md
-│   └── SQL
-│       ├── DataBase_Modeling_SQL_Oracle.pdf
-│       ├── aggregation.md
-│       ├── join.md
-│       ├── mysql_creobjects.sql
-│       ├── schema.sql
-│       ├── transaction.md
-│       └── view.md
+│   ├── JavaScript
+│   ├── Python
+│   ├── SQL
+│   └── TypeScript
 └── Tools
+    ├── Git
     ├── Google
-    │   └── gmail.md
     └── VIM
-        ├── find-next.md
-        ├── init.vim
-        └── nvim-settings.md
 ```
-
