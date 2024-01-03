@@ -56,14 +56,6 @@ According to [How browsers work](https://developer.mozilla.org/en-US/docs/Web/Pe
 > 💡 JavaScript can block HTML parsing:<br />
 > When the HTML parser finds a `<script>` tag, it pauses the parsing of the HTML document and has to load, parse, and execute the JavaScript code. Why? because JavaScript can change the shape of the document using things like `document.write()` which changes the entire DOM structure
 
-## How do we optimize startup performance?
-
-1. Well-structured document
-
-https://developer.mozilla.org/en-US/docs/Learn/Performance/Measuring_performance
-https://developer.mozilla.org/en-US/docs/Web/Performance/Fundamentals
-https://web.dev/learn/performance
-
 ## Next topic
 
 - [How react renders content](/)
