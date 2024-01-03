@@ -1,30 +1,4 @@
-# How Broswer Works
-
-Prerequisite: [What happens when you type a URL into your browser?](https://aws.amazon.com/blogs/mobile/what-happens-when-you-type-a-url-into-your-browser/)
-
-1. Browser looks up IP address for the domain
-
-- If the browser cannot find the IP address at any of those cache layers, the DNS server on your corporate network or at your ISP(Internet service provider) does a recursive DNS(Domain Name System) lookup.
-
-2. Browser initiates TCP connection with the server
-
-- Once the browser finds the server on the Internet, it establishes a TCP(Transmission Control Protocol) connection with the server and if HTTPS is being used, a TLS(Transport Layer Security) handshake takes place to secure the communication.
-
-3. Browser sends the HTTP request to the server
-
-- `GET /hello-world HTTP/1.1`: you want to `GET` resource at `/hello-world` and to communicate with `HTTP/1.1`.
-
-4. Server processes request and sends back a response
-
-- The requested resource at that path is either content like HTML, CSS, Javascript, or image files, or data
-
-5. Browser renders the content
-
-- Browser inspects the response headers for information on how to render the resource. For example, `Content-Type: text/html; charset=utf-8` on header tells the browser it received an HTML resource in the response body.
-
-## How browser renders content
-
-Let's take step further. As we are frontend developers, we must know how browser renders content.
+# How Broswer Renders Content
 
 According to [How browsers work](https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work) and [Critical Rendering Path](https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path)
 
@@ -56,6 +30,12 @@ According to [How browsers work](https://developer.mozilla.org/en-US/docs/Web/Pe
 > 💡 JavaScript can block HTML parsing:<br />
 > When the HTML parser finds a `<script>` tag, it pauses the parsing of the HTML document and has to load, parse, and execute the JavaScript code. Why? because JavaScript can change the shape of the document using things like `document.write()` which changes the entire DOM structure
 
-## Next topic
+## Furthermore
 
-- [How react renders content](/)
+Previous topic:
+
+- [What Happens When You Type a URL Into Your Browser?](what-happens-when-you-type-url-into-browser.md)
+
+Next topic:
+
+- [How React Renders Content](../Reactjs/how-react-works.md)
