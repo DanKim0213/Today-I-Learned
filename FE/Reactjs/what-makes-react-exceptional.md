@@ -39,11 +39,103 @@ async function handleFormSubmit(e) {
 
 ## React applies minimal necessary operations
 
-According to [Render and Commit](https://react.dev/learn/render-and-commit):
+According to [Render and Commit](https://react.dev/learn/render-and-commit) and [Preserving and Resetting State](https://react.dev/learn/preserving-and-resetting-state):
 
 > React only changes **the DOM nodes** if there’s a difference between renders.
 
-There are three steps until you see UI on screen:
+Let's see two examples:
+
+```js
+// tl;dr;React only updates the content of <h1> with the new time.
+// Here is a component that re-renders with different props passed from its parent every second.
+// The text doesn’t disappear when the component re-renders on the input.
+export default function Clock({ time }) {
+  return (
+    <>
+      <h1>{time}</h1>
+      <input />
+    </>
+  );
+}
+```
+
+Remember that it’s the position in the UI tree—not in the JSX markup—that matters to React!
+React doesn’t know where you place the conditions in your function. All it “sees” is the tree you return.
+
+```js
+// tl;dr;Same component at the same position preserves state
+import { useState } from "react";
+
+export default function App() {
+  const [isFancy, setIsFancy] = useState(false);
+  return (
+    <div>
+      {isFancy ? <Counter isFancy={true} /> : <Counter isFancy={false} />}
+      <label>
+        <input
+          type="checkbox"
+          checked={isFancy}
+          onChange={(e) => {
+            setIsFancy(e.target.checked);
+          }}
+        />
+        Use fancy styling
+      </label>
+    </div>
+  );
+}
+
+// The above code could be:
+import { useState } from "react";
+
+export default function App() {
+  const [isFancy, setIsFancy] = useState(false);
+  if (isFancy) {
+    return (
+      <div>
+        <Counter isFancy={true} />
+        <label> <input ... /> Use fancy styling </label>
+      </div>
+    );
+  }
+  return (
+    <div>
+      <Counter isFancy={false} />
+      <label> <input ... /> Use fancy styling </label>
+    </div>
+  );
+}
+```
+
+<details>
+<summary> 💡 What if you want these two Counters to be independent? </summary>
+
+you can render them in two different positions:
+
+```js
+import { useState } from "react";
+
+export default function Scoreboard() {
+  const [isPlayerA, setIsPlayerA] = useState(true);
+  return (
+    <div>
+      {isPlayerA && <Counter person="Taylor" />}
+      {!isPlayerA && <Counter person="Sarah" />}
+      <button
+        onClick={() => {
+          setIsPlayerA(!isPlayerA);
+        }}
+      >
+        Next player!
+      </button>
+    </div>
+  );
+}
+```
+
+</details><br />
+
+How is this possible? Let's check out what happens underneath React rendering. There are three steps until you see UI on screen:
 
 1. Triggering a render
 2. Rendering the component
@@ -60,6 +152,8 @@ To put it simply,
 - _Committing to the DOM_ is that React modifies the DOM.
 
 (Note that Commiting is not equal to Painting.)
+
+Consequently, React figures out what DOM nodes to be changed while _Rendering the component_. And then, React applies minimal necessary operations.
 
 ## Furthermore
 

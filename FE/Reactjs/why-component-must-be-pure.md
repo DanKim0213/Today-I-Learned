@@ -1,6 +1,6 @@
 # Why Component Must Be Pure
 
-https://react.dev/learn/keeping-components-pure
+According to [Keeping components pure](https://react.dev/learn/keeping-components-pure)
 
 Rendering must always be a pure calculation:
 
@@ -15,3 +15,5 @@ Previous topic:
 - [What Makes React Exceptional](./what-makes-react-exceptional.md)
 
 Next topic:
+
+- [how do declare state cleverly](/)
