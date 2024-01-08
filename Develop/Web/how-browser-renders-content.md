@@ -1,4 +1,16 @@
-# How Broswer Renders Content
+# How Browser Renders Content
+
+TL;DR;
+
+1. DOM tree
+2. CSSOM tree
+3. Render tree
+4. Layout
+5. Paint
+
+So far, we've looked over [What Happens Behind Browser](./what-happens-behind-browser.md)
+
+## The steps of how browser renders content
 
 According to [How browsers work](https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work) and [Critical Rendering Path](https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path)
 
@@ -12,7 +24,7 @@ According to [How browsers work](https://developer.mozilla.org/en-US/docs/Web/Pe
 - While the DOM construction is incremental, CSSOM is not. CSS is render blocking: the browser blocks page rendering until it receives and processes all the CSS.
 - CSS is render blocking because rules can be overwritten, so the content can't be rendered until the CSSOM is complete.
 
-3. Rendering tree
+3. Render tree
 
 - The render tree captures both the content and the styles: the DOM and CSSOM trees are combined into the render tree.
 
@@ -31,11 +43,5 @@ According to [How browsers work](https://developer.mozilla.org/en-US/docs/Web/Pe
 > When the HTML parser finds a `<script>` tag, it pauses the parsing of the HTML document and has to load, parse, and execute the JavaScript code. Why? because JavaScript can change the shape of the document using things like `document.write()` which changes the entire DOM structure
 
 ## Furthermore
-
-Previous topic:
-
-- [What Happens When You Type a URL Into Your Browser?](what-happens-when-you-type-url-into-browser.md)
-
-Next topic:
 
 - [How React Renders Content](../Reactjs/how-react-works.md)

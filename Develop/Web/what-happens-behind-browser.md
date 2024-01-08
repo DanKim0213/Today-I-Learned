@@ -1,4 +1,14 @@
-# What happens when you type a URL into your browser?
+# What Happens Behind Browser
+
+TL;DR;
+
+1. IP address for the domain
+2. TCP Connection
+3. HTTP request to the server
+4. Response from the server
+5. Browser rendering.
+
+## What happens when you type a URL into your browser?
 
 According to [What happens when you type a URL into your browser?](https://aws.amazon.com/blogs/mobile/what-happens-when-you-type-a-url-into-your-browser/):
 
@@ -23,7 +33,5 @@ According to [What happens when you type a URL into your browser?](https://aws.a
 - Browser inspects the response headers for information on how to render the resource. For example, `Content-Type: text/html; charset=utf-8` on header tells the browser it received an HTML resource in the response body.
 
 ## Furthermore
-
-Next topic:
 
 - [How Broswer Renders Content](./how-browser-renders-content.md)

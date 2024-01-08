@@ -14,11 +14,13 @@ TIL 레포의 이슈는 내가 앞으로 쓸 포스트 내용을 빠르게 등�
 
 TIL 레포에서 단어 검색은 `cmd + k`로 검색창을 띄운 다음, `@dankim0213/today-i-learned`를 입력하고 tap을 누르면 할 수 있다. 만약 슬라이싱된 단어를 모두 검색하고 싶다면, 정규식을 활용하자. e.g. `@dankim0213/today-i-learned /type*/`
 
+[INDEX](./INDEX.md) 파일을 통해 각 문서에 대한 간략한 정보를 알 수 있다. 문서에 대한 간단한 정보는 `head` 리눅스 명령어를 사용해 10줄씩 정리한다. e.g. `head Develop/**/*`. 따라서, 각 문서의 상단에 TL;DR;을 작성하자.
+
 ## Entry points
 
 기억의 지도를 구성하는 시작점들이다. 여기서부터 천천히 길을 따라가면 전체적인 맥락을 이해할 수 있다.
 
-- [How Browser Works (feat. frontend)](./FE/Web/how-browser-works.md)
+- [What Happens Behind Browser](./Develop/Web/what-happens-behind-browser.md)
 - ~~BFS vs DFS (feat. algorithms)~~
 - ~~Speaking JavaScript (feat. languages)~~
 
@@ -49,3 +51,71 @@ TIL 레포에서 단어 검색은 `cmd + k`로 검색창을 띄운 다음, `@dan
     ├── Google
     └── VIM
 ```
+
+## Index
+
+Develop
+
+<details>
+  <summary>Reactjs</summary>
+
+    # What Makes React Exceptional
+
+    TL;DR;
+
+    - Tell React your destination, not turn by turn where to go - Declarative UI Programming.
+    - All React “sees” is the UI tree you return, based on which it changes the DOM nodes.
+
+</details>
+
+<details>
+  <summary>Web</summary>
+
+    ==> Develop/Web/how-browser-renders-content.md <==
+    # How Browser Renders Content
+
+    TL;DR;
+
+    1. DOM tree
+    2. CSSOM tree
+    3. Render tree
+    4. Layout
+    5. Paint
+
+
+    ==> Develop/Web/responsive-design.md <==
+    # Responsive Design
+
+    Table of Content
+
+    1. Types of design
+    1. Responsive Design
+    1. Media queries
+    1. Macro layouts
+    1. Micro layouts
+    1. Typography
+
+    ==> Develop/Web/testing-tool.md <==
+    # Load Testing Tool
+
+    Content
+
+    1. K6
+    1. Lighthouse
+    1. Furthermore
+
+    ## K6
+
+
+    ==> Develop/Web/what-happens-behind-browser.md <==
+    # What Happens Behind Browser
+
+    TL;DR;
+
+    1. IP address for the domain
+    2. TCP Connection
+    3. HTTP request to the server
+    4. Response from the server
+    5. Browser rendering.
+
+</details>
