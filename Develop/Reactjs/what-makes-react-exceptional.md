@@ -5,9 +5,9 @@ TL;DR;
 - Tell React your destination, not turn by turn where to go - Declarative UI Programming.
 - All React “sees” is the UI tree you return, based on which it changes the DOM nodes.
 
-So far, we've looked over [How Browser Renders Content](../Web/how-browser-renders-content.md)
+So far, you've looked over [How Browser Renders Content](../Web/how-browser-renders-content.md)
 
-What makes React exceptional? First, _[Declarative UI Programming](#declarative-ui-programming)_ changes the way we codes. And lastly, by _[React applying minimum operations](#react-applies-minimal-necessary-operations)_, the duration of browser painting is decreased.
+What makes React exceptional? First, _[Declarative UI Programming](#declarative-ui-programming)_ changes the way your codes. And lastly, by _[React applying minimum operations](#react-applies-minimal-necessary-operations)_, the duration of browser painting is decreased.
 
 ## Declarative UI Programming
 
@@ -17,7 +17,7 @@ According to [Reacting to input with state](https://react.dev/learn/reacting-to-
 
 In React, you don’t directly manipulate the UI—meaning you don’t enable, disable, show, or hide components directly.
 
-This could be an answer to _why should we use Reactjs rather than manipulating DOM by ourselves_.
+This could be an answer to _why should you use Reactjs rather than manipulating DOM by ourselves_.
 
 It seems like, when you take a texi, telling a driver your destination instead of telling him turn by turn where to go.
 

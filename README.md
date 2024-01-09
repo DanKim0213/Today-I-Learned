@@ -14,7 +14,7 @@ TIL 레포의 이슈는 내가 앞으로 쓸 포스트 내용을 빠르게 등�
 
 TIL 레포에서 단어 검색은 `cmd + k`로 검색창을 띄운 다음, `@dankim0213/today-i-learned`를 입력하고 tap을 누르면 할 수 있다. 만약 슬라이싱된 단어를 모두 검색하고 싶다면, 정규식을 활용하자. e.g. `@dankim0213/today-i-learned /type*/`
 
-[INDEX](./INDEX.md) 파일을 통해 각 문서에 대한 간략한 정보를 알 수 있다. 문서에 대한 간단한 정보는 `head` 리눅스 명령어를 사용해 10줄씩 정리한다. e.g. `head Develop/**/*`. 따라서, 각 문서의 상단에 TL;DR;을 작성하자.
+[INDEX](#index)를 통해 각 문서에 대한 간략한 정보를 알 수 있다. 문서에 대한 간단한 정보는 `head` 리눅스 명령어를 사용해 10줄씩 정리한다. e.g. `head Develop/**/*`. 따라서, 각 문서의 상단에 TL;DR;을 작성하자.
 
 ## Entry points
 
@@ -37,7 +37,6 @@ TIL 레포에서 단어 검색은 `cmd + k`로 검색창을 띄운 다음, `@dan
 │   ├── Search
 │   └── Undefined
 ├── Develop
-│   ├── Assignment
 │   ├── Reactjs
 │   ├── Test
 │   └── Web
