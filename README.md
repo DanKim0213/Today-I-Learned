@@ -58,12 +58,34 @@ Develop
 <details>
   <summary>Reactjs</summary>
 
+    ==> Develop/Reactjs/components-must-be-pure.md <==
+    # Component Must Be Pure
+
+    TL;DR;
+
+    - Components must be pure since, by doing so, React can restart rendering without wasting time.
+    - Strict mode can help surface mistakes caused by impure functions as soon as possible.
+    - `Event handler` is the saviour to comply with purity, in response to side effects.
+    - `useEffect()` call is your last resort, in response to side effects.
+
+    So far, you've looked over [What Makes React Exceptional](./what-makes-react-exceptional.md).
+
+    ==> Develop/Reactjs/react-hook-form.md <==
+    # React Hook Form
+
+    Simple form validation with React Hook Form.
+
+    [Quick Start](https://react-hook-form.com/get-started#Quickstart)
+
+    ==> Develop/Reactjs/what-makes-react-exceptional.md <==
     # What Makes React Exceptional
 
     TL;DR;
 
     - Tell React your destination, not turn by turn where to go - Declarative UI Programming.
     - All React “sees” is the UI tree you return, based on which it changes the DOM nodes.
+
+    So far, you've looked over [How Browser Renders Content](../Web/how-browser-renders-content.md)
 
 </details>
 
