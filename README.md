@@ -20,8 +20,8 @@ TIL 레포에서 단어 검색은 `cmd + k`로 검색창을 띄운 다음, `@dan
 
 기억의 지도를 구성하는 시작점들이다. 여기서부터 천천히 길을 따라가면 전체적인 맥락을 이해할 수 있다.
 
-- [What Happens Behind Browser](./Develop/Web/what-happens-behind-browser.md)
-- ~~BFS vs DFS (feat. algorithms)~~
+- [What Happens Behind Browser (feat. develop)](./Develop/Web/what-happens-behind-browser.md)
+- [Introduction to Algorithms (feat. algorithms)](./Algorithms/introduction-to-algorithms.md)
 - ~~Speaking JavaScript (feat. languages)~~
 
 ## Tree
@@ -139,4 +139,36 @@ Develop
     4. Response from the server
     5. Browser rendering.
 
+</details><br />
+
+Algorithms
+
+<details>
+  <summary>Introduction</summary>
+
+    ==> Algorithms/introduction-to-algorithms.md <==
+    # Introduction to Algorithms
+
+    TL;DR;
+
+    - Algorithms are largely divided into two parts: _Brute-force_ and _Divide-and-Conquer_.
+    - You should be used to _Data Structure_ before diving into Algorithms.
+    - You could unexpectedly run into two errors: _Recursion Error_ and _Timeout Error_.
+
+    ==> Algorithms/bfs-vs-dfs.md <==
+    # BFS vs DFS
+
+    TL;DR;
+
+    - Either BFS or DFS: problems solved by just checking link between nodes.
+    - BFS: not only checking link but also achieving your goal in the middle of searching.
+    - DFS: not only checking link but also achieving your goal in the end of searching.
+
+    ## Either BFS or DFS
+
 </details>
+
+<details>
+  <summary>Search</summary>
+
+</details><br />

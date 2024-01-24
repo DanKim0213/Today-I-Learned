@@ -52,7 +52,7 @@ Here are several problems that must be solved by BFS:
 
 Let's see 스타트링크:
 
-![B5014](./B5014.png)
+![b5014](./b5014.png)
 
 ## DFS
 
@@ -79,8 +79,7 @@ Here are several problems that must be solved by DFS:
 
 Let's see 빵집:
 
-TODO:
-![]()
+![b3109](./b3109.png)
 
 ## Furthermore
 
