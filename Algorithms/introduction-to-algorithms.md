@@ -50,6 +50,12 @@ import sys
 input = sys.stdin.readline
 ```
 
+### 3. Line Breaking Error
+
+Python을 사용할 때 `sys.stdin.readline()`을 쓸때 개행 문자가 뒤따라 붙는다. 반면에 `input()`에는 붙지 않는다.
+
+따라서 `sys.stdin.readline().rstrip()`으로 개행문자 제거를 **꼭** 해주자
+
 ## Furthermore
 
 - [BFS vs DFS](./bfs-vs-dfs.md)
