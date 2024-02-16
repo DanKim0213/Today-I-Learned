@@ -23,6 +23,7 @@ TIL 레포에서 단어 검색은 `cmd + k`로 검색창을 띄운 다음, `@dan
 - [What Happens Behind Browser (feat. develop)](./Develop/Web/what-happens-behind-browser.md)
 - [Introduction to Algorithms (feat. algorithms)](./Algorithms/introduction-to-algorithms.md)
 - ~~Speaking JavaScript (feat. languages)~~
+- [Introduction to Test (feat. develop)](./Develop/Test/introduction-to-test.md)
 
 ## Tree
 
@@ -138,6 +139,94 @@ Develop
     3. HTTP request to the server
     4. Response from the server
     5. Browser rendering.
+
+</details>
+
+<details>
+  <summary>Test</summary>
+
+    ==> Develop/Test/check-arguments.md <==
+    # Check arguments
+
+    TL;DR;
+
+    - You have two options to check arguments.
+    - One of them is `mockFn.toHaveBeenCalledWith()`.
+    - The other is `mockFn.toHaveBeenReturnedWith()`.
+
+    Make sure you've read [Introduction to Test](./introduction-to-test.md).
+
+
+    ==> Develop/Test/how-to-handle-errors-with-jest.md <==
+    # How to handle errors with Jest
+
+    ## Agenda
+
+    1. The goal of this post
+    2. expect.assertions(number) rather than done()
+    3. .rejects rather than try-catch
+    4. .toThrow rather than toMatch or toEqual
+    5. Use-case 1: Handle Error in a function
+    6. Use-case 2: Handle Error in an asynchronous function
+
+    ==> Develop/Test/index-of-kent-c-dodds.md <==
+    # Index of Kent C. Dodds
+
+    ## How to use
+
+    - How to use jest.mock() and use the exported function as if jest.fn():[app-03](https://github.com/kentcdodds/react-testing-library-course/blob/main/src/__tests__/app-03.js)
+    - How to test custom hooks with `renderHook()`: [custom-hook-02](https://github.com/kentcdodds/react-testing-library-course/blob/main/src/__tests__/custom-hook-02.js) to [custom-hook-03](https://github.com/kentcdodds/react-testing-library-course/blob/main/src/__tests__/custom-hook-03.js)
+    - How to use `mockFn.fn()` with `mockFn.mockResolvedValueOnce()` for dependency injection:
+      [dependency-injection](https://github.com/kentcdodds/react-testing-library-course/blob/main/src/__tests__/dependency-injection.js)
+    - How to use MSW: [http-jest-mock](https://github.com/kentcdodds/react-testing-library-course/blob/main/src/__tests__/http-jest-mock.js) and [http-msw-mock](https://github.com/kentcdodds/react-testing-library-course/blob/main/src/__tests__/http-msw-mock.js)
+    - How to use queryBy: [mock-component](https://github.com/kentcdodds/react-testing-library-course/blob/main/src/__tests__/mock-component.js)
+
+    ==> Develop/Test/introduction-to-test.md <==
+    # Introduction to Test
+
+    TL;DR;
+
+    - Test as simple as possible.
+    - Test as much as users would use.
+    - Test as precisely as possible.
+
+    > [The more your tests resemble the way your software is used, the more confidence they can give you.](https://testing-library.com/docs/guiding-principles/)
+
+
+    ==> Develop/Test/test-as-much-as-users-would-use.md <==
+    # Test as much as Users would use
+
+    TL;DR;
+
+    - Priority when to query: `Role` > `LabelText` > `Text`.
+    - Avoid to use `TestId`.
+    - Use `user-event` over `fire-event`.
+    - You can't access component methods or the component instance.
+
+    Make sure you've read [Introduction to Test](./introduction-to-test.md).
+
+    ==> Develop/Test/test-as-precisely-as-possible.md <==
+    # Test as precisely as possible
+
+    TL;DR;
+
+    - Use proper queries.
+    - Make your tests more declarative.
+    - Query within elements.
+
+    Make sure you've read [Introduction to Test](./introduction-to-test.md).
+
+
+    ==> Develop/Test/test-as-simple-as-possible.md <==
+    # Test as simple as possible
+
+    TL;DR;
+
+    - Write Integration tests rather than Unit tests.
+    - Isolate modules by mocking.
+    - Separte concerns by tests for meaningful test fails.
+
+    Make sure you've read [Introduction to Test](./introduction-to-test.md).
 
 </details><br />
 
