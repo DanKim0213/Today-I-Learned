@@ -64,4 +64,4 @@ You will learn three parts of how to write tests based on [MDN Todo tested by Da
 
 ---
 
-If you have any questions or ideas, please make a comment of this issue :)
+If you have any questions or ideas, please leave a comment on this issue :)

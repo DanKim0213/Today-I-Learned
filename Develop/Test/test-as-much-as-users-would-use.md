@@ -156,4 +156,4 @@ The rule of thumb to avoid implementation details is to rely on `queries` and `u
 
 ---
 
-If you have any questions or ideas, please make a comment of this issue :)
+If you have any questions or ideas, please leave a comment on this issue :)

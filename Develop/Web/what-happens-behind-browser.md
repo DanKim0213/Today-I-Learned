@@ -35,3 +35,7 @@ According to [What happens when you type a URL into your browser?](https://aws.a
 ## Furthermore
 
 - [How Broswer Renders Content](./how-browser-renders-content.md)
+
+---
+
+If you have any questions or ideas, please leave a comment on this issue :)

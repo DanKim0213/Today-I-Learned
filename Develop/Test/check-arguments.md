@@ -125,4 +125,4 @@ MockTodo.mockImplementation((props) =>
 
 ---
 
-If you have any questions or ideas, please make a comment of this issue :)
+If you have any questions or ideas, please leave a comment on this issue :)

@@ -61,3 +61,7 @@ If you’ve exhausted all other options and can’t find the right event handler
 ## Furthermore
 
 - [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect)
+
+---
+
+If you have any questions or ideas, please leave a comment on this issue :)

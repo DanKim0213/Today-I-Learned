@@ -44,4 +44,8 @@ According to [How browsers work](https://developer.mozilla.org/en-US/docs/Web/Pe
 
 ## Furthermore
 
-- [How React Renders Content](../Reactjs/how-react-works.md)
+- [What makes React exceptional](../Reactjs/what-makes-react-exceptional.md)
+
+---
+
+If you have any questions or ideas, please leave a comment on this issue :)

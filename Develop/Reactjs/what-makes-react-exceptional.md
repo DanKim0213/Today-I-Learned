@@ -166,4 +166,8 @@ Consequently, React figures out what DOM nodes to be changed while _Rendering th
 
 ## Furthermore
 
-- [Why Component Must Be Pure ](./why-component-must-be-pure.md)
+- [Components must be pure ](./components-must-be-pure.md)
+
+---
+
+If you have any questions or ideas, please leave a comment on this issue :)

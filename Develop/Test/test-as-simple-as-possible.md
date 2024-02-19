@@ -180,8 +180,8 @@ describe("Todo Integration test", () => {
 });
 ```
 
-Some developers would say that it looks better to combine the two tests for less codes. However, I can argue that this looks much better because, by separation of concern, you can get a meaningful test fail, e.g. `renders todo`, as soon as possible rather than tacking down error logs.
+Some developers would say that it looks better to combine the two tests for less codes. However, I can argue that this looks much better because, by separation of concern, you can get a meaningful test fail, e.g. `renders todo`, as soon as possible rather than tracking down error logs.
 
 ---
 
-If you have any questions or ideas, please make a comment of this issue :)
+If you have any questions or ideas, please leave a comment on this issue :)
