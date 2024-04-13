@@ -247,3 +247,33 @@ newParent.afn();
  *  fn cb:  ParentClass { name: 'hoi', fn: [Function: fn], afn: [Function: afn] }
  * /
 ```
+
+```js
+"use strict";
+
+const parent = {
+  name: "parent1",
+  echo: this.name,
+  func: function () {
+    console.log(this.name);
+  },
+  arrowFunc: () => console.log(this.name),
+  child: {
+    name: "child1",
+    echo: this.name,
+    func: function () {
+      console.log(this.name);
+    },
+    arrowFunc: () => console.log(this.name),
+    cbFunc: function () {
+      [1].forEach((el) => console.log("cb: ", this.name));
+    },
+  },
+};
+
+parent.func();
+parent.arrowFunc();
+parent.child.func();
+parent.child.arrowFunc();
+parent.child.cbFunc();
+```
