@@ -6,13 +6,19 @@ Therefore, I make my mind to switch to NvChad for my daily IDE. It is because I 
 
 ## Prerequisite
 
-Neovim
+Install Iterm2 (for true colors)
+
+> brew install --cask iterm2
+
+Install Neovim
 
 > brew install neovim
 
-Nerd Font
+Install Nerd Font (for icons)
 
 > brew tap homebrew/cask-fonts && brew install --cask font-jetbrains-mono-nerd-font
+
+Set the font in `Text` settings.
 
 Delete old neovim folders (or backup)
 
