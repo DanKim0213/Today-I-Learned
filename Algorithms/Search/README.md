@@ -15,7 +15,7 @@ Table of Content
 
 ## BFS & DFS
 
-[DFS와 BFS](B1260.md), [바이러스](B2606.md), [단지번호 붙이기](https://www.acmicpc.net/problem/2667), [촌수계산](https://www.acmicpc.net/problem/2644), [스타트링크](B5014.md), [안전 영역](B2468.md), [빙산](B2573.md), [맥주 마시면서 걸어가기](B9205.md), [로봇 청소기](B14503.md), [게리맨더링](https://www.acmicpc.net/problem/17471), [주식](B11501.md), [경주로 건설](P67259.md)
+[DFS와 BFS](B1260.md), [바이러스](B2606.md), [단지번호 붙이기](https://www.acmicpc.net/problem/2667), [촌수계산](https://www.acmicpc.net/problem/2644), [스타트링크](B5014.md), [안전 영역](B2468.md), [빙산](B2573.md), [맥주 마시면서 걸어가기](B9205.md), [로봇 청소기](B14503.md), [게리맨더링](https://www.acmicpc.net/problem/17471), [주식](B11501.md), [경주로 건설](P67259.md), [구슬 찾기\*\*](B2617.md)
 
 ### BFS
 
@@ -23,7 +23,7 @@ Table of Content
 
 ### DFS
 
-[세 수의 합\*](./b2295.md), [감시](B15683.md), [빵집](B3109.md), [ABCDE](B13023.md), [양궁대회\*](P92342.md), [구슬 찾기\*\*](B2617.md)
+[세 수의 합\*](./b2295.md), [감시](B15683.md), [빵집](B3109.md), [ABCDE](B13023.md), [양궁대회\*](P92342.md)
 
 ## Binary Search
 
