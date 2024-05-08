@@ -201,6 +201,10 @@ Preferences -> Profiles -> Keys -> Left Option key -> Esc+
 
 [Check this issue](https://github.com/NvChad/NvChad/issues/897#issuecomment-1081693338)
 
+### Prettierd is not working right away
+
+It is because prettierd is a kind of demon. Therefore, log out and in of your computer.
+
 ### Useful plugins
 
 There are bunch of useful plugins that helps you for web development:
