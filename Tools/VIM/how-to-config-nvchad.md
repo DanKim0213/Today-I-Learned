@@ -186,13 +186,26 @@ Done.
 
 ## Misc
 
+### Relative Number
+
 You can set nvim to show relative numbers: `:set relativenumber`.
 (or attach `vim.wo.relativenumber = true` onto `nvim/init.lua`)
+
+### Option key is not working on Iterm2
+
+You must set disable Option Input Symbol on iTerm2 config.
+
+```
+Preferences -> Profiles -> Keys -> Left Option key -> Esc+
+```
+
+[Check this issue](https://github.com/NvChad/NvChad/issues/897#issuecomment-1081693338)
+
+### Useful plugins
 
 There are bunch of useful plugins that helps you for web development:
 
 - the builtin [NvChad/nvim-colorizer](https://github.com/NvChad/nvim-colorizer.lua)
-- [Rustywind](https://github.com/avencera/rustywind)
 - [tailwindcss-colorizer-cmp](https://github.com/roobert/tailwindcss-colorizer-cmp.nvim?tab=readme-ov-file)
 
 ## References
